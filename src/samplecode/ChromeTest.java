@@ -34,7 +34,7 @@ public class ChromeTest extends TestCase {
   @BeforeClass
   public static void createAndStartService() {
     service = new ChromeDriverService.Builder()
-        .usingChromeDriverExecutable(new File("/Users/kubo/Dev/Web/selenium/chromedriver"))
+        .usingChromeDriverExecutable(new File("driver/chromedriver.exe"))
         .usingAnyFreePort()
         .build();
     try {
@@ -55,7 +55,7 @@ public class ChromeTest extends TestCase {
 //	  DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 //	  capabilities.setCapability("chrome.binary", "/usr/lib/chromium-browser/chromium-browser");
 //    driver = new RemoteWebDriver(service.getUrl(), capabilities);
-	  System.setProperty("webdriver.chrome.driver", "/Users/kubo/Dev/Web/selenium/chromedriver");
+	  System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
       driver = new ChromeDriver();
   }
 
